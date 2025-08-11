@@ -1,0 +1,2 @@
+rootProject.name = 'SearchLab'
+include 'core', 'movies', 'movies-web'

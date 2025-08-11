@@ -1,0 +1,9 @@
+micronaut:
+  application:
+    name: movies-web
+  server:
+    port: 8080
+
+logger:
+  levels:
+    io.micronaut: INFO

@@ -1,0 +1,24 @@
+plugins {
+    id 'java-library'
+}
+
+group = 'dev.ivan.searchlab.core'
+version = '1.0-SNAPSHOT'
+
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    api("org.apache.lucene:lucene-core:10.2.2")
+    api("org.apache.lucene:lucene-analysis-common:10.2.2")
+    api("org.apache.lucene:lucene-queryparser:10.2.2")
+
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
