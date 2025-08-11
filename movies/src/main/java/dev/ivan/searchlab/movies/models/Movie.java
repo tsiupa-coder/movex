@@ -10,30 +10,29 @@ public class Movie extends AbstractDocument {
 
     private boolean adult;
     private Map<String, Object> belongsToCollection;
-    private long budget;
+    private Long budget;
     private List<Map<String, Object>> genres;
     private String homepage;
-    private long id;
+    private Long id;
     private String imdbId;
     private String originalLanguage;
     private String originalTitle;
     private String overview;
-    private double popularity;
+    private Double popularity;
     private String posterPath;
     private List<Map<String, Object>> productionCompanies;
     private List<Map<String, Object>> productionCountries;
     private String releaseDate;
-    private long revenue;
-    private int runtime;
+    private Long revenue;
+    private Integer runtime;
     private List<Map<String, Object>> spokenLanguages;
     private String status;
     private String tagline;
     private String title;
-    private boolean video;
-    private double voteAverage;
-    private int voteCount;
+    private Boolean video;
+    private Double voteAverage;
+    private Integer voteCount;
 
-    // Getters & Setters
     public boolean isAdult() {
         return adult;
     }
@@ -50,11 +49,11 @@ public class Movie extends AbstractDocument {
         this.belongsToCollection = belongsToCollection;
     }
 
-    public long getBudget() {
+    public Long getBudget() {
         return budget;
     }
 
-    public void setBudget(long budget) {
+    public void setBudget(Long budget) {
         this.budget = budget;
     }
 
@@ -74,11 +73,11 @@ public class Movie extends AbstractDocument {
         this.homepage = homepage;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -114,11 +113,11 @@ public class Movie extends AbstractDocument {
         this.overview = overview;
     }
 
-    public double getPopularity() {
+    public Double getPopularity() {
         return popularity;
     }
 
-    public void setPopularity(double popularity) {
+    public void setPopularity(Double popularity) {
         this.popularity = popularity;
     }
 
@@ -154,19 +153,19 @@ public class Movie extends AbstractDocument {
         this.releaseDate = releaseDate;
     }
 
-    public long getRevenue() {
+    public Long getRevenue() {
         return revenue;
     }
 
-    public void setRevenue(long revenue) {
+    public void setRevenue(Long revenue) {
         this.revenue = revenue;
     }
 
-    public int getRuntime() {
+    public Integer getRuntime() {
         return runtime;
     }
 
-    public void setRuntime(int runtime) {
+    public void setRuntime(Integer runtime) {
         this.runtime = runtime;
     }
 
@@ -202,27 +201,27 @@ public class Movie extends AbstractDocument {
         this.title = title;
     }
 
-    public boolean isVideo() {
+    public Boolean getVideo() {
         return video;
     }
 
-    public void setVideo(boolean video) {
+    public void setVideo(Boolean video) {
         this.video = video;
     }
 
-    public double getVoteAverage() {
+    public Double getVoteAverage() {
         return voteAverage;
     }
 
-    public void setVoteAverage(double voteAverage) {
+    public void setVoteAverage(Double voteAverage) {
         this.voteAverage = voteAverage;
     }
 
-    public int getVoteCount() {
+    public Integer getVoteCount() {
         return voteCount;
     }
 
-    public void setVoteCount(int voteCount) {
+    public void setVoteCount(Integer voteCount) {
         this.voteCount = voteCount;
     }
 }
