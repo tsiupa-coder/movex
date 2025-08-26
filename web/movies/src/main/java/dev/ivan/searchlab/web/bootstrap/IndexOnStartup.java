@@ -1,0 +1,49 @@
+package dev.ivan.searchlab.web.bootstrap;
+
+import dev.ivan.searchlab.bridge.movies.lucene.service.LuceneMovieIndexer;
+import dev.ivan.searchlab.web.config.LuceneIndexConfig;
+import dev.ivan.searchlab.web.runtime.IndexState;
+import io.micronaut.context.event.ApplicationEventListener;
+import io.micronaut.runtime.server.event.ServerStartupEvent;
+import jakarta.inject.Singleton;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import java.nio.file.Path;
+
+@Singleton
+public class IndexOnStartup implements ApplicationEventListener<ServerStartupEvent> {
+    private static final Logger LOG = LoggerFactory.getLogger(IndexOnStartup.class);
+
+    private final LuceneIndexConfig cfg;
+    private final IndexState indexState;
+    private final LuceneMovieIndexer luceneMovieIndexer;
+
+    public IndexOnStartup(LuceneIndexConfig cfg, IndexState indexState, LuceneMovieIndexer luceneMovieIndexer) {
+        this.cfg = cfg;
+        this.luceneMovieIndexer = luceneMovieIndexer;
+        this.indexState = indexState;
+    }
+
+    @Override
+    public void onApplicationEvent(ServerStartupEvent event) {
+        if (!cfg.isOnStartup()) {
+            LOG.debug("Startup indexing disabled");
+            return;
+        }
+        try {
+            indexState.markNotReady();
+            LOG.info("Starting indexing: csv={}, indexDir={}, create={}, ramMb={}",
+                    cfg.getCsvPath(), cfg.getIndexDir(), cfg.isCreate(), cfg.getRamMb());
+
+            Path indexPath = Path.of(cfg.getCsvPath());
+            luceneMovieIndexer.index(indexPath);
+
+            indexState.markReady();
+            LOG.info("Indexing complete, search is now ready.");
+        } catch (Exception e) {
+            LOG.error("Indexing failed; search remains unavailable.", e);
+            // keep NOT ready
+        }
+    }
+}

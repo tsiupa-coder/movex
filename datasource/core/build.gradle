@@ -2,7 +2,7 @@ plugins {
     id 'java-library'
 }
 
-group = 'dev.ivan.searchlab.core'
+group = 'dev.ivan.searchlab.datasource.core'
 version = '1.0-SNAPSHOT'
 
 
@@ -11,6 +11,7 @@ repositories {
 }
 
 dependencies {
+    api project(':core')
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
 }

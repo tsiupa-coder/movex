@@ -1,0 +1,20 @@
+micronaut:
+  application:
+    name: movies-web
+  server:
+    port: 8080
+  endpoints:
+    health:
+      enabled: true
+      sensitive: false   # or true if you want to require auth
+logger:
+  levels:
+    io.micronaut: INFO
+searchlab:
+  index:
+    on-startup: true        # set false to disable the startup job
+    csv-path: /home/ivan/Documents/movex/movies_metadata.csv
+    index-dir: /home/ivan/Documents/movex/index
+    create: true            # recreate index on startup
+    ram-mb: 1024            # Lucene RAM buffer (optional)
+    batch-size: 1000        # number of documents to index at once

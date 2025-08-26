@@ -1,2 +1,9 @@
 rootProject.name = 'SearchLab'
-include 'core', 'movies', 'movies-web'
+include 'core'
+include 'domains:movies'
+include 'web:movies'
+include 'search:core'
+include 'search:lucene'
+include "bridge:movies-lucene"
+include "datasource:core"
+include "datasource:csv"
