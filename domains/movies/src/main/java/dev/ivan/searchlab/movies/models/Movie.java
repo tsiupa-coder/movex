@@ -1,6 +1,6 @@
 package dev.ivan.searchlab.movies.models;
 
-import dev.ivan.searchlab.movies.core.model.AbstractDataModel;
+import dev.ivan.searchlab.core.model.AbstractDataModel;
 
 import java.util.List;
 import java.util.Map;

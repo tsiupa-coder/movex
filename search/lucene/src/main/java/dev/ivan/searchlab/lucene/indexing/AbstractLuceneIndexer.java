@@ -1,8 +1,8 @@
 package dev.ivan.searchlab.lucene.indexing;
 
 import dev.ivan.searchlab.datasource.core.DataSource;
-import dev.ivan.searchlab.movies.core.mapper.AbstractDataModelMapper;
-import dev.ivan.searchlab.movies.core.model.AbstractDataModel;
+import dev.ivan.searchlab.core.mapper.AbstractDataModelMapper;
+import dev.ivan.searchlab.core.model.AbstractDataModel;
 import org.apache.lucene.document.Document;
 import org.apache.lucene.index.IndexWriter;
 

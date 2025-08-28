@@ -2,13 +2,12 @@ package dev.ivan.searchlab.datasource.csv;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import dev.ivan.searchlab.movies.core.model.AbstractDataModel;
+import dev.ivan.searchlab.core.model.AbstractDataModel;
 
 import java.util.List;
 import java.util.Map;
 
-public abstract class BaseCsvRowDecoder<T extends AbstractDataModel>
-        implements CsvRowDecoder<T> {
+public abstract class BaseCsvRowDecoder<T extends AbstractDataModel> implements CsvRowDecoder<T> {
 
     protected static final ObjectMapper M = new ObjectMapper();
 

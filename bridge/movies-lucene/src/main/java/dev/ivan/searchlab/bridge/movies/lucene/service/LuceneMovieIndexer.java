@@ -1,7 +1,7 @@
 package dev.ivan.searchlab.bridge.movies.lucene.service;
 
 import dev.ivan.searchlab.lucene.indexing.AbstractLuceneIndexer;
-import dev.ivan.searchlab.movies.core.mapper.AbstractDataModelMapper;
+import dev.ivan.searchlab.core.mapper.AbstractDataModelMapper;
 import dev.ivan.searchlab.movies.datasource.MovieCsvDataSource;
 import dev.ivan.searchlab.movies.models.Movie;
 import org.apache.lucene.document.Document;

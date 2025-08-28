@@ -1,6 +1,6 @@
 package dev.ivan.searchlab.datasource.csv;
 
-import dev.ivan.searchlab.movies.core.model.AbstractDataModel;
+import dev.ivan.searchlab.core.model.AbstractDataModel;
 
 import java.util.Map;
 

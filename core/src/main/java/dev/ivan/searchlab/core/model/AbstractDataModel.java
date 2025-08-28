@@ -1,4 +1,4 @@
-package dev.ivan.searchlab.movies.core.model;
+package dev.ivan.searchlab.core.model;
 
 public abstract class AbstractDataModel {
 }

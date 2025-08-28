@@ -1,6 +1,6 @@
-package dev.ivan.searchlab.movies.core.mapper;
+package dev.ivan.searchlab.core.mapper;
 
-import dev.ivan.searchlab.movies.core.model.AbstractDataModel;
+import dev.ivan.searchlab.core.model.AbstractDataModel;
 
 public abstract class AbstractDataModelMapper<T extends AbstractDataModel, D> implements Mapper<T, D> {
 

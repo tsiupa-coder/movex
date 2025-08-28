@@ -4,7 +4,7 @@ import com.univocity.parsers.csv.CsvParser;
 import com.univocity.parsers.csv.CsvParserSettings;
 import dev.ivan.searchlab.datasource.core.DataSource;
 import dev.ivan.searchlab.datasource.core.RowConsumer;
-import dev.ivan.searchlab.movies.core.model.AbstractDataModel;
+import dev.ivan.searchlab.core.model.AbstractDataModel;
 
 import java.io.Reader;
 import java.util.HashMap;

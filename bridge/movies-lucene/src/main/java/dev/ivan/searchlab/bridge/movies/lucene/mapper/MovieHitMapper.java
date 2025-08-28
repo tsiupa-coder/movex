@@ -12,13 +12,23 @@ import static dev.ivan.searchlab.bridge.movies.lucene.spec.MovieFields.TITLE;
 public final class MovieHitMapper implements LuceneHitMapper<MovieSearchResult> {
 
     @Override
-    public MovieSearchResult map(Document d, float score) {
-        MovieSearchResult m = new MovieSearchResult();
-        m.setId(d.get(ID));
-        m.setTitle(d.get(TITLE));
-        m.setScore(score);
-        m.setPosterPath(d.get(POSTER_PATH));
-        m.setHomepage(d.get(HOMEPAGE));
-        return m;
+    public MovieSearchResult map(Document document, float score) {
+        MovieSearchResult movieSearchResult = new MovieSearchResult();
+
+        String id = document.get(ID);
+        movieSearchResult.setId(id);
+
+        String title = document.get(TITLE);
+        movieSearchResult.setTitle(title);
+
+        movieSearchResult.setScore(score);
+
+        String posterPath = document.get(POSTER_PATH);
+        movieSearchResult.setPosterPath(posterPath);
+
+        String homepage = document.get(HOMEPAGE);
+        movieSearchResult.setHomepage(homepage);
+
+        return movieSearchResult;
     }
 }

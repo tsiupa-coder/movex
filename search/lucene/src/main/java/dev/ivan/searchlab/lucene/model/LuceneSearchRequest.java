@@ -3,6 +3,7 @@ package dev.ivan.searchlab.lucene.model;
 import dev.ivan.searchlab.search.core.model.SearchRequest;
 import java.util.List;
 
+// todo move to movie Lucene bridge module
 public class LuceneSearchRequest extends SearchRequest {
     private String q;
 
